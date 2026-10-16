@@ -110,8 +110,7 @@ const getApiBase = async () => {
 };
 
 const fetchWithCreds = async (endpoint: string, options: RequestInit = {}) => {
-  const base = await getApiBase();
-  const url = `${base}${endpoint}`;
+  const base = await getApiBase();const url = `${base.replace(/\/+$/, '')}${endpoint}`;
   // Ensure we send credentials to persist session (cookies)
   const defaultOptions: RequestInit = {
     ...options,
