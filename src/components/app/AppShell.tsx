@@ -101,9 +101,10 @@ const AppShell: React.FC<AppShellProps> = ({
     return (
         <div
             ref={layoutRootRef}
-            className="fixed inset-0 w-full h-full flex flex-col overflow-hidden font-sans transition-colors duration-500"
+            className="fixed inset-0 w-full flex flex-col overflow-hidden font-sans transition-colors duration-500"
             style={{
                 ...appStyle,
+                height: '100vh',
                 borderRadius: shouldApplyWindowRadius ? '18px' : undefined,
                 boxShadow: showTransparentWindowBorder ? 'inset 0 0 0 1px rgba(255,255,255,0.24)' : undefined,
             }}
